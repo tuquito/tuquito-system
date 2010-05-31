@@ -1,0 +1,24 @@
+tuquito-system (1.2-3.1) lucid; urgency=low
+
+  * correcciones en motd
+  * eliminada opcion de alt+ctrl+ backspace
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 31 May 2010 00:36:10 -0300
+
+tuquito-system (1.2-3) lucid; urgency=low
+
+  * Modificacion de dependencias
+
+ -- Mario Colque <mario@tuquito.org.ar>  Sun, 11 Apr 2010 15:10:47 -0300
+
+tuquito-system (1.2-2) lucid; urgency=low
+
+  * Arreglos en info y templates
+
+ -- Mario Colque <mario@tuquito.org.ar>  Sun, 11 Apr 2010 14:33:48 -0300
+
+tuquito-system (1.2-1) 4.0; urgency=low
+
+  * Versión Inicial
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 29 Mar 2010 23:21:26 -0300

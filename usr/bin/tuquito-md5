@@ -1,0 +1,6 @@
+#!/bin/bash
+TITLE="Tuquito MD5"
+zenity --width=400 --height=90 --progress --pulsate --auto-close --auto-kill --title="$TITLE" --text="Calculando suma MD5" & MD5="`md5sum "$1" | cut -d " " -f1`"
+killall zenity
+TEXT="\nArchivo: $1\nMD5: $MD5"
+zenity --info --title="$TITLE" --text="$TEXT"
