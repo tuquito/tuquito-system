@@ -104,7 +104,7 @@ try:
 			issuefile = open('/etc/motd', 'w')
 			issuefile.writelines(text)
 			issuefile.close()
-			log('/etc/motd.tail restaurado')
+			log('/etc/motd restaurado')
 		if os.path.exists('/var/run/motd'):
 			issuefile = open('/var/run/motd', 'w')
 			issuefile.writelines(text)

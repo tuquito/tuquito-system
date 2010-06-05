@@ -1,3 +1,9 @@
+tuquito-system (1.2-3.3) lucid; urgency=low
+
+  * correcion en log
+
+ -- Mario Colque <mario@tuquito.org.ar>  Fri, 04 Jun 2010 21:52:55 -0300
+
 tuquito-system (1.2-3.2) lucid; urgency=low
 
   * correccion en sobreescritura de archivo motd
