@@ -100,8 +100,8 @@ try:
 	# Restaura /etc/motd y /etc/motd.tail
 	if etcMotd == 'True':
 		text = 'Documentación oficial de Tuquito:\nhttp://tukipedia.tuquito.org.ar\n'
-		if os.path.exists('/etc/motd.tail'):
-			issuefile = open('/etc/motd.tail', 'w')
+		if os.path.exists('/etc/motd'):
+			issuefile = open('/etc/motd', 'w')
 			issuefile.writelines(text)
 			issuefile.close()
 			log('/etc/motd.tail restaurado')
