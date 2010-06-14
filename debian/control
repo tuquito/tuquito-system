@@ -4,11 +4,10 @@ Priority: extra
 Maintainer: Mario Colque <mario@tuquito.org.ar>
 Build-Depends: debhelper (>= 7)
 Standards-Version: 3.8.1
-Homepage: http://paquetes.tuquito.org.ar
 
 Package: tuquito-system
 Architecture: all
-Depends: tuquito-info-main-32 | tuquito-info-main-64
+Depends: tuquito-info-32 | tuquito-info-64 | tuquito-info-lxde
 Description: Ajsutes del sistema
  Paquete de configuración y ajuste del sistema
  * Tuquito Team! - 2010

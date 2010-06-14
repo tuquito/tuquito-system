@@ -1,3 +1,9 @@
+tuquito-system (1.2-3.4) lucid; urgency=low
+
+  * correccion en dependencias
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 14 Jun 2010 13:29:44 -0300
+
 tuquito-system (1.2-3.3) lucid; urgency=low
 
   * correcion en log
