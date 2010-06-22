@@ -1,2 +1,3 @@
 #!/bin/bash
-/usr/lib/tuquito/tuquito-ajustes/tuquito-ajustes.py
+/usr/lib/tuquito/tuquito-ajustes/tuquito-ajustes.py &
+exit 0

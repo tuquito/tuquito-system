@@ -1,3 +1,9 @@
+tuquito-system (1.2-4) lucid; urgency=low
+
+  * Corrección en sobreescritura de /etc/motd
+
+ -- Mario Colque <mario@tuquito.org.ar>  Tue, 22 Jun 2010 19:31:55 -0300
+
 tuquito-system (1.2-3.4) lucid; urgency=low
 
   * correccion en dependencias

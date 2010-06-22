@@ -1,0 +1,3 @@
+#!/bin/sh
+echo "Welcome to Tuquito!"
+echo " * Documentation:  http://tukipedia.tuquito.org.ar/"

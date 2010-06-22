@@ -21,7 +21,6 @@ try:
 	glob = config.get("Global", "enabled")
 	lsbRelease = config.get("Restore", "lsb-release")
 	etcIssue = config.get("Restore", "etc-issue")
-	etcMotd = config.get("Restore", "etc-motd")
 
 	# Sale si está desabilitado
 	if glob == 'False':
@@ -96,20 +95,6 @@ try:
 			issuefile.writelines(issue + '\n')
 			issuefile.close()
 			log('/etc/issue.net restaurado')
-
-	# Restaura /etc/motd y /etc/motd.tail
-	if etcMotd == 'True':
-		text = 'Documentación oficial de Tuquito:\nhttp://tukipedia.tuquito.org.ar\n'
-		if os.path.exists('/etc/motd'):
-			issuefile = open('/etc/motd', 'w')
-			issuefile.writelines(text)
-			issuefile.close()
-			log('/etc/motd restaurado')
-		if os.path.exists('/var/run/motd'):
-			issuefile = open('/var/run/motd', 'w')
-			issuefile.writelines(text)
-			issuefile.close()
-			log('/var/run/motd restaurado')
 
 except Exception, detail:
 	print detail
