@@ -1,3 +1,9 @@
+tuquito-system (1.2-5) lucid; urgency=low
+
+  * eliminados los binarios de mini aplicaciones
+
+ -- Mario Colque <mario@tuquito.org.ar>  Wed, 30 Jun 2010 00:24:29 -0300
+
 tuquito-system (1.2-4) lucid; urgency=low
 
   * Corrección en sobreescritura de /etc/motd
