@@ -1,3 +1,9 @@
+tuquito-system (1.2-6) lucid; urgency=low
+
+  * aplicaciones nuevamente agregadas
+
+ -- Mario Colque <mario@tuquito.org.ar>  Sun, 04 Jul 2010 18:49:39 -0300
+
 tuquito-system (1.2-5) lucid; urgency=low
 
   * eliminados los binarios de mini aplicaciones
