@@ -18,12 +18,12 @@ try:
 	# Lee la configuración
 	config = ConfigParser.ConfigParser()
 	config.read('/etc/tuquito/tuquito-ajustes.conf')
-	glob = config.get("Global", "enabled")
-	lsbRelease = config.get("Restore", "lsb-release")
-	etcIssue = config.get("Restore", "etc-issue")
+	enabled = config.getboolean("Global", "enabled")
+	lsbRelease = config.getboolean("Restore", "lsb-release")
+	etcIssue = config.getboolean("Restore", "etc-issue")
 
 	# Sale si está desabilitado
-	if glob == 'False':
+	if not enabled:
 		log('Desabilitado - Detenido')
 		exit(0)
 
@@ -72,7 +72,7 @@ try:
 						log(matchingDestination + ' reemplazado por ' + source)
 
 	# Restaura la información LSB
-	if lsbRelease == 'True':
+	if lsbRelease:
 		if os.path.exists('/etc/lsb-release'):
 			lsbfile = open('/etc/lsb-release', 'w')
 			lsbfile.writelines('DISTRIB_ID=Tuquito\n')
@@ -83,7 +83,7 @@ try:
 			log('/etc/lsb-release restaurado')
 
 	# Restaura /etc/issue y /etc/issue.net
-	if etcIssue == 'True':
+	if etcIssue:
 		issue = commands.getoutput('cat /etc/tuquito/info | grep DESCRIPTION').replace('DESCRIPTION=', '').replace('"', '')
 		if os.path.exists('/etc/issue'):
 			issuefile = open('/etc/issue', 'w')
