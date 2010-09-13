@@ -1,3 +1,10 @@
+tuquito-system (1.2-7) maverick; urgency=low
+
+  * getboolean method has implemented
+  * lancher fixed
+
+ -- Mario Colque <mario@tuquito.org.ar>  Sun, 12 Sep 2010 23:47:25 -0300
+
 tuquito-system (1.2-6) lucid; urgency=low
 
   * aplicaciones nuevamente agregadas
