@@ -1,3 +1,9 @@
+tuquito-system (1.2-8) maverick; urgency=low
+
+  * renamed to maverick
+
+ -- Mario Colque <mario@tuquito.org.ar>  Mon, 13 Sep 2010 00:06:20 -0300
+
 tuquito-system (1.2-7) maverick; urgency=low
 
   * getboolean method has implemented
