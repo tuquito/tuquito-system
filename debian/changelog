@@ -1,3 +1,12 @@
+tuquito-system (1.2-10) maverick; urgency=low
+
+  * Added LSB tags to tuquito-system init.d script
+  * highlight only highlights one arg now, but more reliably and faster (using sed)
+  * Added triggers
+  * Changed cat | grep to grep, and fixed a typo in the adjustment system.
+
+ -- Mario Colque <mario@tuquito.org.ar>  Sat, 25 Sep 2010 11:41:28 -0300
+
 tuquito-system (1.2-9) maverick; urgency=low
 
   * several improvements
