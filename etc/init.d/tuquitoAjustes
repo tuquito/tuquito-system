@@ -1,3 +1,11 @@
-#!/bin/bash
+#! /bin/sh
+
+### BEGIN INIT INFO
+# Provides:          tuquitoAjustes
+# Required-Start:    $local_fs $syslog $remote_fs dbus
+# Required-Stop:     $local_fs $syslog $remote_fs
+# Default-Start:     S
+# Default-Stop:
+### END INIT INFO
+
 /usr/lib/tuquito/tuquito-ajustes/tuquito-ajustes.py
-exit 0

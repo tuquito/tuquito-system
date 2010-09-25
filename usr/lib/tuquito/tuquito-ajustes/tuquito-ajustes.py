@@ -76,22 +76,22 @@ try:
 		if os.path.exists('/etc/lsb-release'):
 			lsbfile = open('/etc/lsb-release', 'w')
 			lsbfile.writelines('DISTRIB_ID=Tuquito\n')
-			lsbfile.writelines('DISTRIB_' + commands.getoutput('cat /etc/tuquito/info | grep RELEASE') + '\n')
-			lsbfile.writelines('DISTRIB_' + commands.getoutput('cat /etc/tuquito/info | grep CODENAME') + '\n')
-			lsbfile.writelines('DISTRIB_' + commands.getoutput('cat /etc/tuquito/info | grep DESCRIPTION') + '\n')
+			lsbfile.writelines('DISTRIB_' + commands.getoutput('grep RELEASE /etc/tuquito/info') + '\n')
+			lsbfile.writelines('DISTRIB_' + commands.getoutput('grep CODENAME /etc/tuquito/info') + '\n')
+			lsbfile.writelines('DISTRIB_' + commands.getoutput('grep DESCRIPTION /etc/tuquito/info') + '\n')
 			lsbfile.close()
 			log('/etc/lsb-release restaurado')
 
 	# Restaura /etc/issue y /etc/issue.net
 	if etcIssue:
-		issue = commands.getoutput('cat /etc/tuquito/info | grep DESCRIPTION').replace('DESCRIPTION=', '').replace('"', '')
+		issue = commands.getoutput('grep DESCRIPTION /etc/tuquito/info').replace('DESCRIPTION=', '').replace('"', '')
 		if os.path.exists('/etc/issue'):
 			issuefile = open('/etc/issue', 'w')
 			issuefile.writelines(issue + ' \\n \\l\n')
 			issuefile.close()
 			log('/etc/issue restaurado')
-			if os.path.exists('/etc/issue.net'):
-				issuefile = open('/etc/issue.net', 'w')
+		if os.path.exists('/etc/issue.net'):
+			issuefile = open('/etc/issue.net', 'w')
 			issuefile.writelines(issue + '\n')
 			issuefile.close()
 			log('/etc/issue.net restaurado')
