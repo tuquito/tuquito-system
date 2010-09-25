@@ -1,0 +1,8 @@
+interest /etc/lsb-release
+interest /etc/issue
+interest /etc/issue.net
+interest /usr/lib/openoffice/program
+interest /usr/bin/firefox
+interest /usr/share/sounds/startup.wav
+interest /usr/share/system-config-printer
+interest /etc/tuquito/ajustes
