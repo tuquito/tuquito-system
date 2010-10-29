@@ -1,3 +1,9 @@
+tuquito-system (1.3-1) maverick; urgency=low
+
+  * added tuquito-info-class
+
+ -- Mario Colque <mario@tuquito.org.ar>  Fri, 29 Oct 2010 18:27:08 -0300
+
 tuquito-system (1.2-10) maverick; urgency=low
 
   * Added LSB tags to tuquito-system init.d script
