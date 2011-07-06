@@ -75,8 +75,12 @@ try:
 	if lsbRelease:
 		if os.path.exists('/etc/lsb-release'):
 			lsbfile = open('/etc/lsb-release', 'w')
-			lsbfile.writelines('DISTRIB_ID=Tuquito\n')
-			lsbfile.writelines('DISTRIB_' + commands.getoutput('grep RELEASE /etc/tuquito/info') + '\n')
+			distribId = commands.getoutput('grep DISTRIB_ID /etc/tuquito/info').strip()
+			if (distribId != ''):
+				lsbfile.writelines(distribId + "\n")
+			else:
+				lsbfile.writelines("DISTRIB_ID=Tuquito\n")
+			lsbfile.writelines('DISTRIB_' + commands.getoutput('grep RELEASE= /etc/tuquito/info') + '\n')
 			lsbfile.writelines('DISTRIB_' + commands.getoutput('grep CODENAME /etc/tuquito/info') + '\n')
 			lsbfile.writelines('DISTRIB_' + commands.getoutput('grep DESCRIPTION /etc/tuquito/info') + '\n')
 			lsbfile.close()

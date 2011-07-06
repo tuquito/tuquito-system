@@ -1,13 +1,12 @@
 Source: tuquito-system
 Section: admin
-Priority: extra
+Priority: optional
 Maintainer: Mario Colque <mario@tuquito.org.ar>
 Build-Depends: debhelper (>= 7)
 Standards-Version: 3.8.1
 
 Package: tuquito-system
 Architecture: all
-Depends: tuquito-info-32 | tuquito-info-64 | tuquito-info-lxde
-Description: Ajsutes del sistema
- Paquete de configuración y ajuste del sistema
- * Tuquito Team! - 2010
+Depends: tuquito-info, aptitude
+Description: Tuquito System Base Package
+ Used by the desktop and other Tuquito tools to gather information and process common system tasks.
