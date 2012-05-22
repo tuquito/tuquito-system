@@ -1,4 +1,2 @@
 #!/bin/sh
-echo
-echo "Welcome to Tuquito!"
-echo " * Documentation:  http://www.tuquito.org.ar/"
+printf "\nWelcome to Tuquito!\n * Documentation:  http://www.tuquito.org.ar\n"

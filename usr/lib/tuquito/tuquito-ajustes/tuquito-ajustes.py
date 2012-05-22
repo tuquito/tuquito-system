@@ -21,6 +21,7 @@ try:
 	enabled = config.getboolean("Global", "enabled")
 	lsbRelease = config.getboolean("Restore", "lsb-release")
 	etcIssue = config.getboolean("Restore", "etc-issue")
+	aptConf = config.getboolean("Restore", "apt-conf")
 
 	# Sale si está desabilitado
 	if not enabled:
@@ -31,28 +32,27 @@ try:
 	adjustmentDirectory = '/etc/tuquito/ajustes/'
 	arrayPreserves = []
 	if os.path.exists(adjustmentDirectory):
-		for filename in os.listdir(adjustmentDirectory):
+		overwrites = {}
+		for filename in sorted(os.listdir(adjustmentDirectory)):
 			basename, extension = os.path.splitext(filename)
+			filehandle = open(adjustmentDirectory + '/' + filename)
 			if extension == '.preserve':
-				filehandle = open(adjustmentDirectory + '/' + filename)
 				for line in filehandle:
 					line = line.strip()
 					arrayPreserves.append(line)
 				filehandle.close()
-	overwrites = {}
-	if os.path.exists(adjustmentDirectory):
-		for filename in sorted(os.listdir(adjustmentDirectory)):
-			basename, extension = os.path.splitext(filename)
 			if extension == '.overwrite':
-				filehandle = open(adjustmentDirectory + '/' + filename)
-				for line in filehandle:
-					line = line.strip()
-					lineItems = line.split()
-					if len(lineItems) == 2:
-						source, destination = line.split()
-						if destination not in arrayPreserves:
-							overwrites[destination] = source
-				filehandle.close()
+				if not aptConf and basename == 'apt':
+					log('omitiendo apt.conf')
+				else:
+					for line in filehandle:
+						line = line.strip()
+						lineItems = line.split()
+						if len(lineItems) == 2:
+							source, destination = line.split()
+							if destination not in arrayPreserves:
+								overwrites[destination] = source
+					filehandle.close()
 
 	for key in overwrites.keys():
 		source = overwrites[key]
@@ -76,7 +76,7 @@ try:
 		if os.path.exists('/etc/lsb-release'):
 			lsbfile = open('/etc/lsb-release', 'w')
 			distribId = commands.getoutput('grep DISTRIB_ID /etc/tuquito/info').strip()
-			if (distribId != ''):
+			if distribId != '':
 				lsbfile.writelines(distribId + "\n")
 			else:
 				lsbfile.writelines("DISTRIB_ID=Tuquito\n")

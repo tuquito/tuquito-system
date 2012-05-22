@@ -1,0 +1,6 @@
+Los archivos .overwrite definen reglas de sobreescritura de archivos del sistema. Debe contener la dirección del archivo fuente y la dirección del archivo destino, con el siguiente formato:
+
+<fuente> <destino>
+
+Los archivos .overwrites son leídos en órden alfabético. Si un destino aparece más de una vez, solo será tomado en cuenta la última aparición.
+Los archivos .preserve pueden contener una lista de destinos (uno por línea). Cada destino que aparece en un archivo .preserve, no será sobreescrito.
