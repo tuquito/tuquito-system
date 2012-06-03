@@ -7,6 +7,6 @@ Standards-Version: 3.8.1
 
 Package: tuquito-system
 Architecture: all
-Depends: tuquito-info, aptitude
+Depends: aptitude
 Description: Tuquito System Base Package
  Used by the desktop and other Tuquito tools to gather information and process common system tasks.
